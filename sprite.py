@@ -244,14 +244,14 @@ def draw_timer():
 
 def draw_start_screen():
     window.fill(BLACK)
-    font = pygame.font.Font(None, 40)
-    win_text = font.render("Welcome to PHOTO PHANTOM Scavenger Hunt!", True, WHITE)
-    win_rect = win_text.get_rect(center=(WIDTH // 2, HEIGHT // 3))
+    font = pygame.font.Font('CFHalloween-Regular.ttf', 20)
+    win_text = font.render("WELCOME TO PHOTO PHANTOM SCAVANGER HUNT", True, WHITE)
+    win_rect = win_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
     window.blit(win_text, win_rect)
 
     button_font = pygame.font.Font(None, 36)
     button_text = button_font.render("Start", True, WHITE)
-    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
+    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 ))
     pygame.draw.rect(window, (255, 169, 71), button_rect.inflate(20, 10), border_radius=10)
     window.blit(button_text, button_rect)
 
@@ -261,12 +261,12 @@ def draw_loading_screen():
     window.fill(BLACK)
     font = pygame.font.Font(None, 32)
     load_text = font.render("Load an image to continue", True, WHITE)
-    load_rect = load_text.get_rect(center=(WIDTH // 2, HEIGHT // 3))
+    load_rect = load_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
     window.blit(load_text, load_rect)
 
     button_font = pygame.font.Font(None, 36)
     button_text = button_font.render("Load Image", True, WHITE)
-    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
+    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 ))
     pygame.draw.rect(window, (255, 169, 71), button_rect.inflate(20, 10), border_radius=10)
     window.blit(button_text, button_rect)
 
@@ -274,14 +274,14 @@ def draw_loading_screen():
 
 def draw_win_screen():
     window.fill(BLACK)
-    font = pygame.font.Font(None, 72)
+    font = pygame.font.Font('CFHalloween-Regular.ttf', 72)
     win_text = font.render("Congrats, you win!", True, WHITE)
-    win_rect = win_text.get_rect(center=(WIDTH // 2, HEIGHT // 3))
+    win_rect = win_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
     window.blit(win_text, win_rect)
 
     button_font = pygame.font.Font(None, 36)
     button_text = button_font.render("Play Again", True, WHITE)
-    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
+    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 ))
     pygame.draw.rect(window, (255, 169, 71), button_rect.inflate(20, 10), border_radius=10)
     window.blit(button_text, button_rect)
 
@@ -291,13 +291,13 @@ def draw_lose_screen():
     window.fill(BLACK)
     font = pygame.font.Font(None, 72)
     lose_text = font.render("You Lose!", True, WHITE)
-    lose_rect = lose_text.get_rect(center=(WIDTH // 2, HEIGHT // 3))
+    lose_rect = lose_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
     window.blit(lose_text, lose_rect)
 
     button_font = pygame.font.Font(None, 36)
     button_text = button_font.render("Play Again", True, WHITE)
-    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
-    pygame.draw.rect(window, (50, 50, 200), button_rect.inflate(20, 10), border_radius=10)
+    button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 ))
+    pygame.draw.rect(window, (255, 169, 71), button_rect.inflate(20, 10), border_radius=10)
     window.blit(button_text, button_rect)
 
     return button_rect
