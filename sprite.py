@@ -157,10 +157,10 @@ def spawn_player():
         ##############################
         for dx in range(-30, 30):
             for dy in range(-30, 30):
-                #if 0 <= x + dx < bg_img.get_width() and 0 <= y + dy < bg_img.get_height():
-                if bg_img.get_at((x + dx, y + dy))[:3] != WHITE[:3]:
-                    all_white = False
-                    break
+                if 0 <= x + dx < bg_img.get_width() and 0 <= y + dy < bg_img.get_height():
+                    if bg_img.get_at((x + dx, y + dy))[:3] != WHITE[:3]:
+                        all_white = False
+                        break
             if not all_white:
                 break
         if all_white:
@@ -244,7 +244,7 @@ def draw_timer():
 
 def draw_start_screen():
     window.fill(BLACK)
-    font = pygame.font.Font(None, 32)
+    font = pygame.font.Font(None, 40)
     win_text = font.render("Welcome to PHOTO PHANTOM Scavenger Hunt!", True, WHITE)
     win_rect = win_text.get_rect(center=(WIDTH // 2, HEIGHT // 3))
     window.blit(win_text, win_rect)
@@ -252,7 +252,7 @@ def draw_start_screen():
     button_font = pygame.font.Font(None, 36)
     button_text = button_font.render("Start", True, WHITE)
     button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
-    pygame.draw.rect(window, (50, 50, 200), button_rect.inflate(20, 10), border_radius=10)
+    pygame.draw.rect(window, (255, 169, 71), button_rect.inflate(20, 10), border_radius=10)
     window.blit(button_text, button_rect)
 
     return button_rect
@@ -267,7 +267,7 @@ def draw_loading_screen():
     button_font = pygame.font.Font(None, 36)
     button_text = button_font.render("Load Image", True, WHITE)
     button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
-    pygame.draw.rect(window, (50, 50, 200), button_rect.inflate(20, 10), border_radius=10)
+    pygame.draw.rect(window, (255, 169, 71), button_rect.inflate(20, 10), border_radius=10)
     window.blit(button_text, button_rect)
 
     return button_rect
@@ -282,7 +282,7 @@ def draw_win_screen():
     button_font = pygame.font.Font(None, 36)
     button_text = button_font.render("Play Again", True, WHITE)
     button_rect = button_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
-    pygame.draw.rect(window, (50, 50, 200), button_rect.inflate(20, 10), border_radius=10)
+    pygame.draw.rect(window, (255, 169, 71), button_rect.inflate(20, 10), border_radius=10)
     window.blit(button_text, button_rect)
 
     return button_rect
