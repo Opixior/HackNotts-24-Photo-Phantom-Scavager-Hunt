@@ -275,7 +275,7 @@ def draw_loading_screen():
 def draw_win_screen():
     window.fill(BLACK)
     font = pygame.font.Font('CFHalloween-Regular.ttf', 72)
-    win_text = font.render("Congrats, you win!", True, WHITE)
+    win_text = font.render("CONGRATS YOU WIN", True, WHITE)
     win_rect = win_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
     window.blit(win_text, win_rect)
 
@@ -289,8 +289,8 @@ def draw_win_screen():
 
 def draw_lose_screen():
     window.fill(BLACK)
-    font = pygame.font.Font(None, 72)
-    lose_text = font.render("You Lose!", True, WHITE)
+    font = pygame.font.Font('CFHalloween-Regular.ttf', 72)
+    lose_text = font.render("YOU LOSE", True, WHITE)
     lose_rect = lose_text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
     window.blit(lose_text, lose_rect)
 
